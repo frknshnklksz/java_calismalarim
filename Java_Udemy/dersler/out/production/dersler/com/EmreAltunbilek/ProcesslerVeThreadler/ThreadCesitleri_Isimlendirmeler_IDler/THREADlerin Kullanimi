@@ -1,0 +1,63 @@
+-------------------------------- THREAD'LERİN KULLANIMI --------------------------------
+****************************************************************************************
+
+ 1) Thread'lerin 2 tane yapısı vardır.
+-> User Thread'ler:
+Kullanıcı tarafından oluşturulan threadler.
+JVM ne olursa olsun bu thread'lerin bitmesini bekler ve ondan sonra programı sonlandırır.
+
+-> Daemon Thread'ler:
+JVM'nin sistem için otomatik oluşturduğu thread'lerdir.
+JVM daemon thread'lerin bitmesini beklemek zorunda değildir.
+
+-----------------------------------------------------------------------------------------
+ 2) Thread'ler farklı sırada çalışabilirler. Bu tamamen JVM'e kalmış bir durumdur.
+-----------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------
+ 3) Thread'lere isim verilmezse integer sayıda artan bir isme sahip olurlar;
+ Thread - 0
+ Thread - 1 gibi...
+ -----------------------------------------------------------------------------------------
+
+
+ -----------------------------------------------------------------------------------------
+ 4) Bir sınıf Thread sınıfını extend ettiğinde run diye bir methodu override edebilir
+ duruma gelir. Ve bu sınıf run methodunu override ederek thread'in yapmasını istediği
+ işlemleri belirler. Ama main methodunda bu sınıftan bir nesne üretildiği zaman nesne
+ run methodunu değil de start methodunu çağırmalı. Yoksa o sınıfa özgü bir thread tetiklenmez.
+ -----------------------------------------------------------------------------------------
+
+
+
+ -----------------------------------------------------------------------------------------
+ 5) Biz bir thread'in daemon mu yoksa user thread mi olduğunu öğrenebiliyoruz.
+ Bir thread'i daemon thread olarak atayabiliyoruz. Ama bir thread çalıştırıldıktan sonra
+ daemon thread olarak atanamaz.
+ -----------------------------------------------------------------------------------------
+
+
+
+
+ -----------------------------------------------------------------------------------------
+ 6) Bir thread çalışmaya başladıktan sonra ismi değiştirilebilir.
+ Buna main thread de dahildir.
+ -----------------------------------------------------------------------------------------
+
+
+
+ -----------------------------------------------------------------------------------------
+ 7) Aynı isme sahip birden fazla thread olabilir. Thread'leri ayırmak için ise id'ler kullanılır.
+ Her thread'in kendine özgü bir id'si vardır. Main thread hariç kendi oluşturduğumuz thread'lerin
+ id'leri üzerinde oynamaya yapabiliriz.
+ Trhead sınıfının getId methodunu override ettiğimizde sistemin unique olarak atadığı id'nin
+ üzerinde oynama yapabiliriz.
+ -----------------------------------------------------------------------------------------
+
+
+
+
+ -----------------------------------------------------------------------------------------
+ 8) Bir thread sadece bir kere start diyerek çalıştırılabilir.
+ -----------------------------------------------------------------------------------------

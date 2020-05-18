@@ -1,0 +1,28 @@
+************************* ERİŞİM BELİRLEYİCİLER *************************
+
+PRIVATE
+-----------------------
+1) Bir sınıf erişim belirleyicisi private olamaz.
+2) Bir değişken veya methodlar sadece o sınıfa aittir.
+3) Bir constructor private olabilir ama o zaman o sınıftan nesne üretimine izin vermez.
+Aynı zamanda o sınıftan kalıtım ile yeni bir sınıf extend edilmez.
+4) Bir class içinde private ile sınıf oluşturulabilir. (Inner Class)
+
+DEFAULT / PACKAGE
+-----------------------
+1) Bir değişkenin veya bir methodun başına herhangi bir erişim berirleyicisi yazılmazsa
+java onu default olarak kabul eder.
+Default : Yani o paketin içinde herhangi bir sınıf bu methotlara ve değişkenlere erişebilir.
+Ama farklı bir pakette bu alanlara import edilse erişim olamaz.
+2) Sınıfın içerisinde de erişim belirleyicisi olmayan bir sınıf yazılabilir.
+Ve bu sınıflara da aynı paketten ulaşılabilir. Ama farklı paketlerden ulaşılamaz.
+
+PROTECTED
+-----------------------
+1) Protected ile de sınıflar içersiinde sınıf oluşturulabilir. Başka bir sınıftan
+extend edilebilir. Farklı paketlerden kullanılabilir.
+2) Bir sınıf protected erişim belirleyicisi ile tanımlanamaz.
+
+PUBLIC
+-----------------------
+1) En esneği. Her şey tapılabilir.

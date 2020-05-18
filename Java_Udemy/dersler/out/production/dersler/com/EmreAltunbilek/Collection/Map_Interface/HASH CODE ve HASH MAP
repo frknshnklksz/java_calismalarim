@@ -1,0 +1,60 @@
+-------------------------- HASH CODE ve HASH MAP ÇALIŞMA MANTIĞI --------------------------
+*******************************************************************************************
+ = HASHCODE =
+---------------
+-> HashCode verilerin belirli bir hesaplamaya tabi tutulup sayısal değerler olarak saklanması. Kesinlikle adres değeri değildir.
+Mesela;
+String string1 = "Furkan";
+String string2 = "Furkan";
+diye iki farklı yapı oluşturduğumuzda ve string1.equals(string2); ifadesini yazdığımızda bu ifadenin "true" döndürdüğünü görürüz.
+Aynı şekilde string1.hashCode() ve string2.hashCode() ifadelerinden çıkan sonuçlar da birbirine eşittir.
+
+Fakat;
+class Ogrenci{
+    int id;                 Yandaki öğrenci class'ından iki tane tamamen aynı nesne üretelim.
+    String isim;
+}
+
+Ogrenci ogrenci1 = new Ogrenci(1, "Furkan");
+Ogrenci ogrenci2 = new Ogrenci(1, "Furkan");
+
+Yukarıda tanımlanmış olan iki nesne birbirine tamamen eşittir. Değil mi.?
+Ama ogrenci1.equals(ogrenci2) yazdığımızda bu ifade bize false değerini dönderir.
+Yine aynı şekilde bu iki ifadenin ogrenci1.hashCode() ve ogrenci2.hashCode() diyerek hashcode'ları alınırsa bunlar da farklı çıkacaktır.
+
+Bunun sebebi Ogrenci sınıfında Equals ve HashCode methotları override edilmemiştir.
+
+
+
+ = HASHMAP =
+-------------
+-> HashMap<String, Integer> mapNesnesi = new HashMap<>();
+            key     Value  => ENTRY
+
+* Böyle bir hashMap yapısı oluşturulduğu zaman default olarak bellekte 16 indisli 0 - 15 arası değerleri olan bir dizi tanımlanır.
+
+mapNesnesi.put("Hasan", 1905); diye bir ifade kullandığınızda aslında 1905 değerinin hiç bir önemi yoktur. Bütün işlem "Hasan" key değerinin ,
+üzerinden döner. Peki put dediğimizde dizi'ye nasıl tanımlanır.?
+
+- Öncelikle key değerinin hashCode'u hesaplanır.
+- Çıkan Koda göre dizi'ye aktarılır.
+- Sonra dizinin indisinin olduğu yerde 4 bölmeli bir yapı tutulur.
+Aşağıda şematize edilmeye çalışılmıştır.
+
+---------     ---------     ---------     ---------      -> Bu yapının bütününe'de node denir.
+   KEY          VALUE        HASCHODE       NEXT
+
+mapNesnesi.put("Hasan", 1905); bu ifade'yi görselleştirecek olursak
+
+  HASAN         1905           1234          ***
+---------     ---------     ---------     ---------
+   key          value        hashcode        next
+
+
+Bu ifade'de hasan key'ine ait hascode 1234 belirli bir algoritmadan geçirilerek tabloya yerleştirilir.
+Diyelimli hashcode 1234 için 7 çıktı ve 7.indis'e yerleşti.
+Başka bir verinin hashcode'u da 7 çıkması çok olası. (Verinin key'i "AHMET" olsun. VALUE'si de 1300 olsun.)
+Bu durumda Key'i "AHMET" olan veri 7. indis'e gider ve "HASAN" keyli verinin next yerine bağlanır.
+Bu böyle sürüp gider.
+
+- Key değeri null olan bir veri direk 0. indekse yerleştirilir.
