@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <JFXListView fx:id="listView" layoutX="33.0" layoutY="27.0" prefHeight="332.0" prefWidth="166.0" />
+      <JFXButton layoutX="40.0" layoutY="390.0" onAction="#listeElemanlariniTasi" prefHeight="42.0" prefWidth="152.0" style="-fx-background-color: orange;" text="Seçilenleri Taşı">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXTextArea fx:id="textArea" layoutX="364.0" layoutY="27.0" prefHeight="405.0" prefWidth="281.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</Pane>

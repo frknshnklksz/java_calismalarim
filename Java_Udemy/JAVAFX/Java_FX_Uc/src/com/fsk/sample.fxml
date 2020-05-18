@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fsk.Controller">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="20.0" onAction="#beniTiklaMethodu" prefHeight="58.0" prefWidth="165.0" style="-fx-background-color: red;" text="CLICK ME" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton id="btnMerhaba" layoutX="192.0" layoutY="20.0" onAction="#beniTiklaMethodu" prefHeight="58.0" prefWidth="165.0" text="MERHABA" />
+      <JFXButton layoutX="14.0" layoutY="112.0" onAction="#beniTiklaMethodu" prefHeight="58.0" prefWidth="165.0" styleClass="btnSelam" text="SELAM" />
+   </children>
+</Pane>

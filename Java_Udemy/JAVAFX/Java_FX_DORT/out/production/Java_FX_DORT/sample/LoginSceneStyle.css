@@ -1,0 +1,8 @@
+#root{
+    -fx-background-image: url("background-image.jpg");
+    -fx-background-size: cover;
+}
+
+#pane{
+    -fx-border-width: 5px;
+}

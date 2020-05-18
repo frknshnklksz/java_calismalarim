@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #57A6E9;" stylesheets="@LoginSceneStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane id="pane" layoutX="32.0" layoutY="26.0" prefHeight="348.0" prefWidth="536.0" style="-fx-background-color: #042670; -fx-border-color: white; -fx-border-radius: 50;" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="26.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton fx:id="btnGiris" alignment="CENTER" layoutX="209.0" layoutY="347.0" onAction="#btnGirisYap" style="-fx-border-color: white; -fx-border-radius: 10;" text="GİRİŞ YAP" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="email" focusColor="WHITE" labelFloat="true" layoutX="171.0" layoutY="148.0" prefHeight="38.0" prefWidth="215.0" promptText="Please Enter Your EMAIL" unFocusColor="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXTextField>
+            <Label alignment="CENTER" layoutX="174.0" layoutY="14.0" prefHeight="45.0" prefWidth="199.0" text="GİRİŞ YAP" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="39.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="220.0" layoutY="65.0" text="Lütfen Giriş Yapınız" textAlignment="CENTER" textFill="WHITE" />
+            <JFXPasswordField fx:id="sifre" focusColor="WHITE" labelFloat="true" layoutX="174.0" layoutY="239.0" prefHeight="38.0" prefWidth="215.0" promptText="Please Enter Your PASSWORD" unFocusColor="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXPasswordField>
+            <Label fx:id="sonuc" alignment="CENTER" layoutX="171.0" layoutY="447.0" prefHeight="27.0" prefWidth="221.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

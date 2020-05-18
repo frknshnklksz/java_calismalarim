@@ -1,0 +1,16 @@
+#root{
+    -fx-background-color: burlywood;
+    -fx-text-fill: yellow;
+}
+
+#btnMerhaba{
+    -fx-background-color: teal;
+    -fx-border-radius: 10px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.btnSelam{
+    -fx-background-color: aquamarine;
+    -fx-font-size: 16px;
+}
